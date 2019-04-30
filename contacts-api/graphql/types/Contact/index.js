@@ -5,6 +5,7 @@ type Contact {
     lastName: String!
     phoneNumber: String!
     email: String
+    userId: String
 }
 
 type Query {
@@ -13,7 +14,7 @@ type Query {
 }
 
 type Mutation {
-    addContact(id: String!, name: String!, lastName: String!, phoneNumber: String!, email: String): Contact
+    addContact(id: String!, name: String!, lastName: String!, phoneNumber: String!, email: String, userId: String!): Contact
     editContact(id: String, name: String!, lastName: String!, phoneNumber: String!, email: String): Contact
     deleteContact(id: String): Contact
 }

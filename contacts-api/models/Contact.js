@@ -23,6 +23,10 @@ const ContactSchema = new Schema({
   },
   email: {
     type: String
+  },
+  userId: {
+    type: String,
+    required: true
   }
 });
 

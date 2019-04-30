@@ -21,9 +21,8 @@ export default {
     }
   },
   Mutation: {
-    addContact: (root, { id, name, lastName, phoneNumber, email }) => {
-      const newContact = new Contact({ id, name, lastName, phoneNumber, email });
-
+    addContact: (root, { id, name, lastName, phoneNumber, email, userId }) => {
+      const newContact = new Contact({ id, name, lastName, phoneNumber, email, userId });
       return new Promise((resolve, reject) => {
         newContact.save((err, res) => {
           err ? reject(err) : resolve(res);
