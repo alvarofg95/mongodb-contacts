@@ -7,9 +7,10 @@ import schema from "./graphql/";
 
 const app = express();
 const PORT = process.env.PORT || '4000';
-const db =
-  'mongodb://administrador:administrador@contactmongo-mrx2o.mongodb.net/graphql-mongodb-server';
+/* const db =
+  'mongodb://administrador:administrador@contactmongo-mrx2o.mongodb.net/graphql-mongodb-server'; */
 // Connect to MongoDB with Mongoose.
+const db = 'mongodb://localhost:27017/contacts';
 mongoose
   .connect(db, {
     useCreateIndex: true,
